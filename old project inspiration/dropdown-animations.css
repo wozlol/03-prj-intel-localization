@@ -1,0 +1,114 @@
+/* Dropdown animations for timeframe and date picker dropdowns */
+
+@keyframes swingDown {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+  }
+  50% {
+    opacity: 0.7;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+  75% {
+    opacity: 0.9;
+    transform: rotate(5deg);
+    transform-origin: top right;
+  }
+  90% {
+    transform: rotate(-2deg);
+    transform-origin: top right;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+}
+
+/* Apply to dropdown menus when animations are enabled */
+.animations-enabled .dropdown-animated {
+  animation: swingDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transform-origin: top right;
+}
+
+/* Ensure dropdowns start hidden before animation */
+.animations-enabled .dropdown-animated {
+  opacity: 0;
+}
+
+/* Faster animation for subsequent opens */
+.animations-enabled .dropdown-animated.reopened {
+  animation-duration: 0.3s;
+}
+
+/* Ensure proper z-index during animation */
+.animations-enabled .dropdown-animated {
+  z-index: 50;
+}
+
+/* Optional: Add subtle shadow that grows during animation */
+@keyframes dropShadow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.animations-enabled .dropdown-animated {
+  animation: swingDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+             dropShadow 0.4s ease-out forwards;
+}
+
+/* Dark mode shadow adjustment */
+.dark .animations-enabled .dropdown-animated {
+  animation: swingDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+             dropShadowDark 0.4s ease-out forwards;
+}
+
+@keyframes dropShadowDark {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Close animation - fade, shrink, and rotate */
+@keyframes swingOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transform-origin: top right;
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(0.95) rotate(-5deg);
+    transform-origin: top right;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85) rotate(-15deg);
+    transform-origin: top right;
+  }
+  75% {
+    opacity: 0.2;
+    transform: scale(0.7) rotate(-25deg);
+    transform-origin: top right;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-30deg);
+    transform-origin: top right;
+  }
+}
+
+/* Apply close animation when dropdown is closing */
+.animations-enabled .dropdown-animated.closing {
+  animation: swingOut 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
