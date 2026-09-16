@@ -441,7 +441,7 @@ body.preloading { overflow: hidden; }
   .hero-cloud-one { width: 300px; height: 172px; }
   .timeline-section { padding: 54px 20px 32px; }
   .timeline-heading { display: block; }
-  .timeline-controls { justify-content: flex-start; margin-top: 14px; }
+  .timeline-controls { display: none; }
   .timeline-track { display: flex; flex-direction: column; overflow-x: hidden; overflow-y: visible; scroll-snap-type: none; min-height: auto; gap: 16px; padding: 4px 0 24px; }
   .milestone-card-wrap { flex-basis: auto; width: 100%; max-width: none; min-width: auto; scroll-snap-align: none; }
   .timeline-track::-webkit-scrollbar { height: 0; }
