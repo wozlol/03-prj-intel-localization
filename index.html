@@ -403,18 +403,15 @@
         <div class="container">
           <div class="section-kicker text-center">Sustainability in Focus</div>
           <h2 class="pillars-heading text-center">Strategy, Manufacturing, and Climate</h2>
-          <p class="pillars-intro text-center">
-            Three areas of Intel's sustainability work, drawn from the milestones on the timeline above.
-          </p>
           <div class="row row-cols-1 row-cols-md-3 g-4 pillars-row">
             <div class="col" id="strategy">
               <div class="pillar-card h-100">
                 <i class="bi bi-signpost-split pillar-icon" aria-hidden="true"></i>
                 <h3>Strategy</h3>
                 <p>In 2020, Intel introduced its RISE strategy, a set of 2030 goals covering climate action, water stewardship, and waste reduction. Two years later, Intel extended that commitment further, targeting net-zero greenhouse gas emissions across its own operations by 2040.</p>
-                <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#strategyModal">
-                  Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-                </button>
+                <a class="pillar-link" href="#timeline">
+                  View on Timeline <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
             <div class="col" id="manufacturing">
@@ -422,9 +419,9 @@
                 <i class="bi bi-gear-wide-connected pillar-icon" aria-hidden="true"></i>
                 <h3>Manufacturing</h3>
                 <p>After operational emissions peaked in 2006, Intel invested in chemical abatement and energy-efficient manufacturing to bring that number down. In 2024, Intel hosted its first Sustainability Summit, bringing suppliers and industry leaders together to work on next-generation sustainable semiconductor manufacturing.</p>
-                <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#manufacturingModal">
-                  Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-                </button>
+                <a class="pillar-link" href="#timeline">
+                  View on Timeline <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
             <div class="col" id="climate">
@@ -432,68 +429,14 @@
                 <i class="bi bi-cloud-sun pillar-icon" aria-hidden="true"></i>
                 <h3>Climate</h3>
                 <p>Intel's operational emissions peaked in 2006. Since then, the company has moved toward renewable electricity, reporting 99% renewable electricity usage worldwide by 2023, and has set a 2040 target for net-zero greenhouse gas emissions across its operations.</p>
-                <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#climateModal">
-                  Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-                </button>
+                <a class="pillar-link" href="#timeline">
+                  View on Timeline <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <div class="modal fade" id="strategyModal" tabindex="-1" aria-labelledby="strategyModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title" id="strategyModalLabel">Strategy</h3>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Intel's RISE strategy stands for Responsible, Inclusive, Sustainable, and Enabling. Launched in 2020, it set public 2030 goals across climate action, water stewardship, and waste reduction.</p>
-              <p>In 2022, Intel built on RISE with a commitment to reach net-zero greenhouse gas emissions, Scope 1 and 2, across its global operations by 2040.</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#timeline" class="btn pillar-modal-btn" data-bs-dismiss="modal">View on Timeline</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="manufacturingModal" tabindex="-1" aria-labelledby="manufacturingModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title" id="manufacturingModalLabel">Manufacturing</h3>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Intel's operational greenhouse gas emissions peaked in 2006. Since then, the company has invested in chemical abatement, renewable energy, and energy-efficient manufacturing.</p>
-              <p>In 2024, Intel hosted its first Sustainability Summit, bringing suppliers, government officials, and industry leaders together to work on next-generation sustainable semiconductor manufacturing.</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#timeline" class="btn pillar-modal-btn" data-bs-dismiss="modal">View on Timeline</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="climateModal" tabindex="-1" aria-labelledby="climateModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title" id="climateModalLabel">Climate</h3>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Intel's operational emissions peaked in 2006. The company has since reported 99% renewable electricity usage worldwide by 2023.</p>
-              <p>In 2022, Intel announced a commitment to reach net-zero greenhouse gas emissions, Scope 1 and 2, across its global operations by 2040.</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#timeline" class="btn pillar-modal-btn" data-bs-dismiss="modal">View on Timeline</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <section class="newsletter-section" id="newsletter">
         <div class="container">
@@ -510,9 +453,11 @@
                   <input type="text" class="form-control" id="newsletterName" name="name" autocomplete="name" />
                 </div>
                 <div class="col-12 col-sm-5">
-                  <label for="newsletterEmail" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                  <label for="newsletterEmail" class="form-label">
+                    Email Address <span aria-hidden="true">*</span>
+                    <span class="form-label-note" id="newsletterEmailHelp">Used only to send sustainability updates.</span>
+                  </label>
                   <input type="email" class="form-control" id="newsletterEmail" name="email" autocomplete="email" required aria-describedby="newsletterEmailHelp" />
-                  <div id="newsletterEmailHelp" class="form-text">Required. Used only to send sustainability updates.</div>
                 </div>
                 <div class="col-12 col-sm-2">
                   <button type="submit" class="btn newsletter-submit w-100">Subscribe</button>
@@ -539,17 +484,14 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <img src="img/intel-header-logo.svg" alt="Intel logo" class="footer-logo" />
-          <p class="footer-note">Student project. Not an official Intel website.</p>
+          <p class="footer-note">© 2026 Student Project. Not an official Intel website. All rights reserved.</p>
         </div>
         <nav class="footer-links" aria-label="Footer">
           <a href="#" class="footer-link">Privacy Policy</a>
           <a href="#" class="footer-link">Terms of Use</a>
           <a href="#" class="footer-link">Contact</a>
         </nav>
-        <div class="footer-meta">
-          <p class="footer-copyright">© 2026 Student Project. All rights reserved.</p>
-          <a class="footer-top-link" href="#top">Back to Top ↑</a>
-        </div>
+        <a class="footer-top-link" href="#top">Back to Top ↑</a>
       </div>
     </footer>
   </div>

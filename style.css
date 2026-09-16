@@ -336,8 +336,7 @@ body.preloading { overflow: hidden; }
 .skip-link:focus { top: 12px; }
 
 .pillars-section { padding: 64px 8vw; background: var(--intel-soft); }
-.pillars-heading { margin: 12px 0 10px; color: var(--intel-blue-deep); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; }
-.pillars-intro { margin: 0 auto 36px; max-width: 620px; color: var(--intel-slate); font-size: 1.05rem; line-height: 1.6; }
+.pillars-heading { margin: 12px 0 36px; color: var(--intel-blue-deep); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; }
 .pillars-row { max-width: 1100px; margin: 0 auto; }
 
 .pillar-card {
@@ -372,13 +371,6 @@ body.preloading { overflow: hidden; }
 }
 .pillar-link:hover, .pillar-link:focus-visible { color: var(--intel-blue-dark); border-color: var(--intel-blue); }
 
-.modal-content { border-radius: 18px; border: none; }
-.modal-header { border-bottom: 1px solid rgba(0, 113, 197, 0.16); }
-.modal-title { color: var(--intel-blue-deep); font-weight: 800; }
-.modal-body p { color: var(--intel-slate); line-height: 1.65; }
-.pillar-modal-btn { background: var(--intel-blue); color: var(--intel-white); font-weight: 700; border: none; border-radius: 999px; padding: 10px 20px; }
-.pillar-modal-btn:hover { background: var(--intel-blue-dark); color: var(--intel-white); }
-
 .newsletter-section { padding: 60px 8vw; background: linear-gradient(120deg, var(--intel-blue-deep) 0%, var(--intel-blue) 100%); }
 .newsletter-inner { max-width: 900px; margin: 0 auto; text-align: center; }
 .newsletter-inner .section-kicker { color: var(--intel-cyan-light); }
@@ -386,7 +378,8 @@ body.preloading { overflow: hidden; }
 .newsletter-inner > .newsletter-copy > p { margin: 0 0 28px; color: var(--intel-cyan-light); font-size: 1.02rem; }
 
 .newsletter-form { text-align: left; }
-.newsletter-form .form-label { color: var(--intel-cyan-light); font-weight: 700; font-size: 0.88rem; }
+.newsletter-form .form-label { color: var(--intel-cyan-light); font-weight: 700; font-size: 0.88rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; min-height: 1.3em; }
+.newsletter-form .form-label-note { font-weight: 400; font-size: 0.76rem; opacity: 0.8; }
 .newsletter-form .form-control {
   border-radius: 10px;
   border: 1px solid rgba(223, 251, 255, 0.4);
@@ -394,7 +387,6 @@ body.preloading { overflow: hidden; }
   padding: 10px 14px;
 }
 .newsletter-form .form-control:focus { border-color: var(--intel-cyan); box-shadow: 0 0 0 3px rgba(155, 234, 252, 0.35); }
-.newsletter-form .form-text { color: var(--intel-cyan-light); opacity: 0.85; font-size: 0.8rem; }
 .newsletter-submit { background: var(--intel-white); color: var(--intel-blue-dark); font-weight: 800; border-radius: 999px; border: none; padding: 10px 18px; transition: background 200ms ease, transform 200ms ease; }
 .newsletter-submit:hover { background: var(--intel-cyan-light); transform: translateY(-2px); }
 
@@ -479,15 +471,12 @@ body.preloading { overflow: hidden; }
 .footer-link { color: var(--intel-cyan-light); text-decoration: none; font-size: 0.86rem; font-weight: 600; opacity: 0.9; transition: opacity 200ms ease, color 200ms ease; }
 .footer-link:hover, .footer-link:focus { opacity: 1; color: var(--intel-white); text-decoration: underline; }
 
-.footer-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-.footer-copyright { margin: 0; font-size: 0.78rem; color: var(--intel-cyan-light); opacity: 0.75; white-space: nowrap; }
 .footer-top-link { color: var(--intel-white); text-decoration: none; font-weight: 700; font-size: 0.86rem; white-space: nowrap; }
 .footer-top-link:hover, .footer-top-link:focus { text-decoration: underline; }
 
 @media (max-width: 767px) {
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-brand { flex-direction: column; }
-  .footer-meta { align-items: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -562,6 +551,5 @@ body.preloading { overflow: hidden; }
 @keyframes preloaderSpin { to { transform: rotate(360deg); } }
 
 [dir="rtl"] .skip-link { left: auto; right: 12px; }
-[dir="rtl"] .footer-meta { align-items: flex-start; }
 [dir="rtl"] .newsletter-form { text-align: right; }
 [dir="rtl"] .pillar-link .bi-arrow-right-short { transform: scaleX(-1); }
