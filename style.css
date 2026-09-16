@@ -155,6 +155,7 @@ body.preloading { overflow: hidden; }
 .hero-button:active { transform: scaleX(0.92) scaleY(1.08); }
 
 #timeline, #strategy, #manufacturing, #climate { scroll-margin-top: 76px; }
+.milestone-card-wrap { scroll-margin-top: 76px; }
 
 .timeline-section { position: relative; width: min(100%, var(--page-max)); margin: 0 auto; padding: 32px 0 40px; }
 .timeline-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 12px; padding: 0 8vw; }
@@ -365,6 +366,7 @@ body.preloading { overflow: hidden; }
   font-weight: 700;
   font-size: 0.96rem;
   cursor: pointer;
+  text-decoration: none;
   border-bottom: 2px solid var(--intel-cyan);
   padding-bottom: 2px;
   transition: color 200ms ease, border-color 200ms ease;

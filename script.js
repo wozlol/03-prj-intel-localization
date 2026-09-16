@@ -122,3 +122,17 @@ checkLanguageDirection();
 
 const languageObserver = new MutationObserver(checkLanguageDirection);
 languageObserver.observe(htmlEl, { attributes: true, attributeFilter: ['lang', 'class'] });
+
+document.querySelectorAll('.timeline-jump').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      block: 'center',
+      inline: 'center',
+    });
+  });
+});
