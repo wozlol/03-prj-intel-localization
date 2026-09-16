@@ -399,83 +399,40 @@
         </div>
       </section>
 
-      <section class="content-ribbon ribbon-strategy" id="strategy">
-        <div class="ribbon-inner">
-          <div class="section-kicker">Where the roadmap is headed</div>
-          <h2>Strategy</h2>
-          <p>
-            In 2020, Intel introduced its RISE strategy, a set of 2030 goals covering
-            climate action, water stewardship, and waste reduction. Two years later,
-            Intel extended that commitment further, targeting net-zero greenhouse gas
-            emissions across its own operations by 2040.
-          </p>
-          <a class="ribbon-link" href="#timeline">See These Milestones on the Timeline</a>
-        </div>
-      </section>
-
-      <section class="content-ribbon ribbon-manufacturing" id="manufacturing">
-        <div class="ribbon-inner">
-          <div class="section-kicker">Cleaner chips, cleaner process</div>
-          <h2>Manufacturing</h2>
-          <p>
-            After operational emissions peaked in 2006, Intel invested in chemical
-            abatement and energy-efficient manufacturing to bring that number down.
-            In 2024, Intel hosted its first Sustainability Summit, bringing suppliers
-            and industry leaders together to work on next-generation sustainable
-            semiconductor manufacturing.
-          </p>
-          <a class="ribbon-link" href="#timeline">See These Milestones on the Timeline</a>
-        </div>
-      </section>
-
-      <section class="content-ribbon ribbon-climate" id="climate">
-        <div class="ribbon-inner">
-          <div class="section-kicker">Emissions and energy over time</div>
-          <h2>Climate</h2>
-          <p>
-            Intel's operational emissions peaked in 2006. Since then, the company has
-            moved toward renewable electricity, reporting 99% renewable electricity
-            usage worldwide by 2023, and has set a 2040 target for net-zero greenhouse
-            gas emissions across its operations.
-          </p>
-          <a class="ribbon-link" href="#timeline">See These Milestones on the Timeline</a>
-        </div>
-      </section>
-
-      <section class="pillars-section" id="pillars">
+      <section class="pillars-section" id="focusAreas">
         <div class="container">
-          <div class="section-kicker text-center">Our Commitments</div>
-          <h2 class="pillars-heading text-center">RISE Strategy Pillars</h2>
+          <div class="section-kicker text-center">Sustainability in Focus</div>
+          <h2 class="pillars-heading text-center">Strategy, Manufacturing, and Climate</h2>
           <p class="pillars-intro text-center">
-            Intel's RISE strategy rests on three pillars that guide its 2030 goals.
+            Three areas of Intel's sustainability work, drawn from the milestones on the timeline above.
           </p>
           <div class="row row-cols-1 row-cols-md-3 g-4 pillars-row">
-            <div class="col">
+            <div class="col" id="strategy">
+              <div class="pillar-card h-100">
+                <i class="bi bi-signpost-split pillar-icon" aria-hidden="true"></i>
+                <h3>Strategy</h3>
+                <p>In 2020, Intel introduced its RISE strategy, a set of 2030 goals covering climate action, water stewardship, and waste reduction. Two years later, Intel extended that commitment further, targeting net-zero greenhouse gas emissions across its own operations by 2040.</p>
+                <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#strategyModal">
+                  Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col" id="manufacturing">
+              <div class="pillar-card h-100">
+                <i class="bi bi-gear-wide-connected pillar-icon" aria-hidden="true"></i>
+                <h3>Manufacturing</h3>
+                <p>After operational emissions peaked in 2006, Intel invested in chemical abatement and energy-efficient manufacturing to bring that number down. In 2024, Intel hosted its first Sustainability Summit, bringing suppliers and industry leaders together to work on next-generation sustainable semiconductor manufacturing.</p>
+                <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#manufacturingModal">
+                  Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col" id="climate">
               <div class="pillar-card h-100">
                 <i class="bi bi-cloud-sun pillar-icon" aria-hidden="true"></i>
-                <h3>Climate Action</h3>
-                <p>Intel has committed to net-zero greenhouse gas emissions across its own operations by 2040, building on programs that began after emissions peaked in 2006.</p>
+                <h3>Climate</h3>
+                <p>Intel's operational emissions peaked in 2006. Since then, the company has moved toward renewable electricity, reporting 99% renewable electricity usage worldwide by 2023, and has set a 2040 target for net-zero greenhouse gas emissions across its operations.</p>
                 <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#climateModal">
-                  Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-            <div class="col">
-              <div class="pillar-card h-100">
-                <i class="bi bi-droplet pillar-icon" aria-hidden="true"></i>
-                <h3>Water Stewardship</h3>
-                <p>Water stewardship is one of the three pillars of Intel's RISE strategy, launched in 2020 alongside its 2030 goals for responsible resource use.</p>
-                <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#waterModal">
-                  Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
-            <div class="col">
-              <div class="pillar-card h-100">
-                <i class="bi bi-recycle pillar-icon" aria-hidden="true"></i>
-                <h3>Waste Reduction</h3>
-                <p>Waste reduction rounds out the RISE strategy's environmental goals, targeting less manufacturing waste on the way to Intel's 2030 targets.</p>
-                <button type="button" class="pillar-link" data-bs-toggle="modal" data-bs-target="#wasteModal">
                   Learn More <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                 </button>
               </div>
@@ -484,16 +441,16 @@
         </div>
       </section>
 
-      <div class="modal fade" id="climateModal" tabindex="-1" aria-labelledby="climateModalLabel" aria-hidden="true">
+      <div class="modal fade" id="strategyModal" tabindex="-1" aria-labelledby="strategyModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h3 class="modal-title" id="climateModalLabel">Climate Action</h3>
+              <h3 class="modal-title" id="strategyModalLabel">Strategy</h3>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p>Intel's operational greenhouse gas emissions peaked in 2006. Since then, the company has invested in chemical abatement, renewable energy, and energy-efficient manufacturing.</p>
-              <p>In 2022, Intel announced a commitment to reach net-zero greenhouse gas emissions, Scope 1 and 2, across its global operations by 2040.</p>
+              <p>Intel's RISE strategy stands for Responsible, Inclusive, Sustainable, and Enabling. Launched in 2020, it set public 2030 goals across climate action, water stewardship, and waste reduction.</p>
+              <p>In 2022, Intel built on RISE with a commitment to reach net-zero greenhouse gas emissions, Scope 1 and 2, across its global operations by 2040.</p>
             </div>
             <div class="modal-footer">
               <a href="#timeline" class="btn pillar-modal-btn" data-bs-dismiss="modal">View on Timeline</a>
@@ -502,37 +459,37 @@
         </div>
       </div>
 
-      <div class="modal fade" id="waterModal" tabindex="-1" aria-labelledby="waterModalLabel" aria-hidden="true">
+      <div class="modal fade" id="manufacturingModal" tabindex="-1" aria-labelledby="manufacturingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h3 class="modal-title" id="waterModalLabel">Water Stewardship</h3>
+              <h3 class="modal-title" id="manufacturingModalLabel">Manufacturing</h3>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p>Water stewardship is one of the goal areas of Intel's RISE strategy, launched in 2020 alongside a set of public 2030 goals.</p>
-              <p>The strategy groups water stewardship with climate action and waste reduction as part of Intel's environmental roadmap.</p>
+              <p>Intel's operational greenhouse gas emissions peaked in 2006. Since then, the company has invested in chemical abatement, renewable energy, and energy-efficient manufacturing.</p>
+              <p>In 2024, Intel hosted its first Sustainability Summit, bringing suppliers, government officials, and industry leaders together to work on next-generation sustainable semiconductor manufacturing.</p>
             </div>
             <div class="modal-footer">
-              <a href="#strategy" class="btn pillar-modal-btn" data-bs-dismiss="modal">View the RISE Strategy</a>
+              <a href="#timeline" class="btn pillar-modal-btn" data-bs-dismiss="modal">View on Timeline</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="modal fade" id="wasteModal" tabindex="-1" aria-labelledby="wasteModalLabel" aria-hidden="true">
+      <div class="modal fade" id="climateModal" tabindex="-1" aria-labelledby="climateModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h3 class="modal-title" id="wasteModalLabel">Waste Reduction</h3>
+              <h3 class="modal-title" id="climateModalLabel">Climate</h3>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p>Waste reduction is one of the pillars of Intel's RISE strategy, set alongside its 2030 goals in 2020.</p>
-              <p>It works together with climate action and water stewardship as part of Intel's broader environmental commitments.</p>
+              <p>Intel's operational emissions peaked in 2006. The company has since reported 99% renewable electricity usage worldwide by 2023.</p>
+              <p>In 2022, Intel announced a commitment to reach net-zero greenhouse gas emissions, Scope 1 and 2, across its global operations by 2040.</p>
             </div>
             <div class="modal-footer">
-              <a href="#strategy" class="btn pillar-modal-btn" data-bs-dismiss="modal">View the RISE Strategy</a>
+              <a href="#timeline" class="btn pillar-modal-btn" data-bs-dismiss="modal">View on Timeline</a>
             </div>
           </div>
         </div>

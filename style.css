@@ -319,17 +319,6 @@ body.preloading { overflow: hidden; }
 .timeline-footer span { display: inline-flex; align-items: center; }
 .timeline-footer span::before, .timeline-footer span::after { content: ""; width: 36px; height: 2px; background: var(--intel-line); border-radius: 8px; margin: 0 14px; }
 
-.content-ribbon { padding: 64px 8vw; }
-.ribbon-strategy { background: var(--intel-white); }
-.ribbon-manufacturing { background: var(--intel-soft); }
-.ribbon-climate { background: var(--intel-white); }
-
-.ribbon-inner { width: min(100%, 760px); margin: 0 auto; text-align: center; }
-.ribbon-inner h2 { margin: 12px 0 18px; color: var(--intel-blue-deep); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; }
-.ribbon-inner p { margin: 0 0 20px; color: var(--intel-slate); font-size: clamp(1rem, 1.6vw, 1.1rem); line-height: 1.7; }
-
-.ribbon-link { display: inline-flex; align-items: center; gap: 8px; color: var(--intel-blue); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--intel-cyan); padding-bottom: 2px; transition: color 240ms ease, border-color 240ms ease; }
-.ribbon-link:hover, .ribbon-link:focus { color: var(--intel-blue-dark); border-color: var(--intel-blue); }
 
 .skip-link {
   position: absolute;
@@ -464,7 +453,6 @@ body.preloading { overflow: hidden; }
   .timeline-track { display: flex; flex-direction: column; overflow-x: hidden; overflow-y: visible; scroll-snap-type: none; min-height: auto; gap: 16px; padding: 4px 0 24px; }
   .milestone-card-wrap { flex-basis: auto; width: 100%; max-width: none; min-width: auto; scroll-snap-align: none; }
   .timeline-track::-webkit-scrollbar { height: 0; }
-  .content-ribbon { padding: 44px 20px; }
 }
 
 .site-footer {
@@ -576,5 +564,4 @@ body.preloading { overflow: hidden; }
 [dir="rtl"] .skip-link { left: auto; right: 12px; }
 [dir="rtl"] .footer-meta { align-items: flex-start; }
 [dir="rtl"] .newsletter-form { text-align: right; }
-[dir="rtl"] .pillar-link .bi-arrow-right-short,
-[dir="rtl"] .ribbon-link .bi-arrow-right-short { transform: scaleX(-1); }
+[dir="rtl"] .pillar-link .bi-arrow-right-short { transform: scaleX(-1); }
