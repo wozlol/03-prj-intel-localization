@@ -73,3 +73,52 @@ if (preloader) {
     new Promise((resolve) => setTimeout(resolve, 5000)),
   ]).then(hidePreloader);
 }
+
+const newsletterForm = document.getElementById('newsletterForm');
+const newsletterToastEl = document.getElementById('newsletterToast');
+
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (!newsletterForm.checkValidity()) {
+      newsletterForm.reportValidity();
+      return;
+    }
+
+    if (newsletterToastEl && window.bootstrap) {
+      const toast = window.bootstrap.Toast.getOrCreateInstance(newsletterToastEl);
+      toast.show();
+    }
+
+    newsletterForm.reset();
+  });
+}
+
+const RTL_LANGUAGE_CODES = ['ar', 'he', 'iw', 'fa', 'ur', 'yi', 'ps', 'sd', 'ku', 'dv'];
+const htmlEl = document.documentElement;
+const bootstrapStylesheet = document.getElementById('bootstrapStylesheet');
+const BOOTSTRAP_LTR_HREF = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
+const BOOTSTRAP_RTL_HREF = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+
+function applyPageDirection(isRtl) {
+  const nextDir = isRtl ? 'rtl' : 'ltr';
+  if (htmlEl.getAttribute('dir') === nextDir) return;
+
+  htmlEl.setAttribute('dir', nextDir);
+
+  if (bootstrapStylesheet) {
+    bootstrapStylesheet.setAttribute('href', isRtl ? BOOTSTRAP_RTL_HREF : BOOTSTRAP_LTR_HREF);
+  }
+}
+
+function checkLanguageDirection() {
+  const currentLang = (htmlEl.getAttribute('lang') || '').toLowerCase().split('-')[0];
+  const isRtl = RTL_LANGUAGE_CODES.includes(currentLang) || htmlEl.classList.contains('translated-rtl');
+  applyPageDirection(isRtl);
+}
+
+checkLanguageDirection();
+
+const languageObserver = new MutationObserver(checkLanguageDirection);
+languageObserver.observe(htmlEl, { attributes: true, attributeFilter: ['lang', 'class'] });
